@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Commissioner', sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: inherit;
+
+
+    transition: all 0.1s linear 0s;
+
+    opacity: 1;
+
+
+
+}
+.card{
+    height: 450px;
+    width: 380px;
+    border: 1px solid rgba(255, 255, 255, 0.463);
+    background-color: rgba(255, 255, 255, 0.121);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.imag{
+    clip-path: circle(33.2% at 50% 60%);
+    height: 250px;
+    width: fit-content;
+}
+img{
+    margin-top: -40px;
+}
+.card h1{
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+.card p{
+    color: white;
+    font-size: 1.3rem;
+}
+.b{
+    display: flex;
+    gap: 30px;
+}
+.btn1{
+    height: 50px;
+    width: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.623);
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: all 0.1s linear 0s;
+}
+.btn2{
+    height: 50px;
+    width: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.616);
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.1s linear 0s;
+}
+button{
+    cursor: pointer;
+}
+.circle1{
+    opacity: 0;
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 500px;
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+
+    filter: drop-shadow(0 0 50px #FF9A8B);
+
+    position: absolute;
+    animation-name: leftcircle;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+@keyframes leftcircle{
+    0%{
+        opacity: 0.8;
+        top: 140px;
+        left: 350px;
+    }
+    40%{
+        opacity: 0.8;
+        top: 190px;
+        left: 550px;
+    }
+    50%{
+        opacity: 0.8;
+        top: 190px;
+        left: 550px;
+    }
+    90%{
+        opacity: 0.8;
+        top: 140px;
+        left: 350px;
+    }
+    100%{
+        opacity: 0.8;
+        top: 140px;
+        left: 350px;
+    }
+}
+.circle2{
+    opacity: 0;
+    width: 250px;
+    height: 250px;
+    border: none;
+    border-radius: 500px;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(180deg, #FF3CAC 4%, #784BA0 52%);
+
+    filter: drop-shadow(0 0 50px #784BA0);
+    box-shadow: 0px 0px 30px #784BA0;
+    position: absolute;
+    animation-name: rightcircle;
+    animation-duration: 28s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+@keyframes rightcircle{
+    0%{
+        opacity: 0.8;
+        top: 420px;
+        right: 280px;
+    }
+    10%{
+        opacity: 0.8;
+        top: 420px;
+        right: 280px;
+    }
+    40%{
+        opacity: 0.8;
+        top: 360px;
+        right: 440px;
+    }
+    50%{
+        opacity: 0.8;
+        top: 360px;
+        right: 440px;
+    }
+    90%{
+        opacity: 0.8;
+        top: 420px;
+        right: 280px;
+    }
+    100%{
+        opacity: 0.8;
+        top: 420px;
+        right: 280px;
+    }
+}
+.btn1:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+.btn2:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+.twocontainer{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.708);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: all 0.3s linear 0s;
+    visibility: hidden;
+    opacity: 0;
+}
+.twocontainer.active{
+    visibility: visible;
+    transition: all 0.3s linear 0s;
+    opacity: 1;
+}
+.sharingbar{
+    height: 280px;
+    width: 540px;
+    background-color: rgba(0, 0, 0, 0.381);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.top_part{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom:100px;
+    width: 90%;
+    height: 32%;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+.crossing{
+    height: 40px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.sharing{
+    font-size: 2.2rem;
+    color: white;
+    font-weight: 800;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.portion{
+    height: 120px;
+    width: 540px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+    /* margin-top: -20px; */
+}
+.imagportion{
+    height: 80px;
+    border: 1px solid white;
+    border-radius: 26px;
+    transition: all 0.1s linear 0s;
+}
+#insta{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.436);
+}
+#twitt{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.436);
+}
+#wt{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.436);
+}
+#li{
+    padding: 14px;
+    background-color: rgba(255, 255, 255, 0.436);
+}
+#insta:hover{
+    background:linear-gradient(45deg,#405DE6,#5851db,#833ab4,#c13584,#e1306c,#fd1d1d);
+    border: 2px solid white;
+    transform: scale(1.2);
+}
+#twitt:hover{
+    background-color: #1DA1F2;
+    border: 2px solid white;
+    transform: scale(1.2);
+}
+#wt:hover{
+    background-color: #25D366;
+    border: 2px solid white;
+    transform: scale(1.2);
+}
+#li:hover{
+    background-color: #0e76a8;
+    border: 2px solid white;
+    transform: scale(1.2);
+}
+.portion div img{
+    cursor: pointer;
+}
+.text_text{
+    font-size: 1.4rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 20%;
+    padding: 10px;
+    font-weight: 800;
+    color: white;
+}
