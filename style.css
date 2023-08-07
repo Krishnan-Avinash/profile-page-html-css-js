@@ -194,7 +194,8 @@ button{
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.708);
-    display: flex;
+    /* display: flex; */
+    display: none;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -203,14 +204,12 @@ button{
     height: 100vh;
     width: 100vw;
     transition: all 0.3s linear 0s;
-    visibility: hidden;
-    opacity: 0;
 }
-.twocontainer.active{
-    visibility: visible;
+/* .container.active{
+    visibility:visible;
     transition: all 0.3s linear 0s;
     opacity: 1;
-}
+} */
 .sharingbar{
     height: 280px;
     width: 540px;
