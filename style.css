@@ -89,6 +89,8 @@ button{
 
     filter: drop-shadow(0 0 50px #FF9A8B);
 
+    z-index: -1;
+    
     position: absolute;
     animation-name: leftcircle;
     animation-duration: 20s;
@@ -132,7 +134,8 @@ button{
     border-radius: 500px;
     background-color: #FF3CAC;
     background-image: linear-gradient(180deg, #FF3CAC 4%, #784BA0 52%);
-
+    
+    z-index: -1;
     filter: drop-shadow(0 0 50px #784BA0);
     box-shadow: 0px 0px 30px #784BA0;
     position: absolute;
